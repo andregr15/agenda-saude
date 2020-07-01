@@ -13,5 +13,5 @@ CypressRails.hooks.after_state_reset do
 end
 
 CypressRails.hooks.before_server_stop do
-  # Called once, at_exit
+  ActiveRecord::Tasks::DatabaseTasks.purge_current
 end
