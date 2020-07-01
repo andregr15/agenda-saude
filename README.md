@@ -63,10 +63,16 @@ Check code style with:
 bundle exec rubocop
 ```
 
-Run tests with:
+Run unit tests with:
 
 ```sh
-bundle exec rails test
+docker exec -it agendamento-vacina_web_1 rspec
+```
+
+Run integration tests with:
+
+```sh
+docker exec -it agendamento-vacina_web_1 rails cypress:run
 ```
 
 Use guard to run tests and check code style as you code:
